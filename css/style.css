@@ -30,8 +30,13 @@
   --special-grenlight: #8ED78F;
 
   --promo-yellow: #FFC047;
-
   --section-background: #F9F5F0;
+  --nav-background: rgba(0, 0, 0, 0.01);
+  --nav-background-active: #1D2739;
+  --slider-background: rgba(0, 0, 0, 0.25);
+  --promo-button-background: rgba(255,255,255,0.3);
+  --promo-button-background-hover: rgba(197,197,197,0.3);
+  --promo-button-background-active: rgba(169,169,169,0.3);
 
   --color-old-price: #A9A9A9;
   --color-trancend: rgba(255, 255, 255, 0.5);
@@ -78,6 +83,7 @@ img {
   line-height: 18px;
   color: var(--white);
   background-color: var(--basic-red);
+  text-transform: uppercase;
 }
 
 .main-header-panel, .main-header-panel a, .main-header-panel, .search {
@@ -91,12 +97,21 @@ img {
   color: var(--black);
 }
 
+.search::placeholder {
+  color: var(--white);
+}
+
 .main-header-panel a:active {
   background-color: var(--header-panel-click);
   color: var(--color-trancend);
 }
 
 .main-header-panel button {
+  line-height: 24px;
+  background-color: var(--basic-green);
+}
+
+.main-header-panel button:hover {
   background-color: var(--success);
 }
 
@@ -105,8 +120,16 @@ img {
   color: var(--color-trancend);
 }
 
+.main-navigation {
+  background-color: var(--nav-background);
+}
+
 .search:focus {
   background-color: var(--white);
+}
+
+.search:focus::placeholder {
+  color: var(--black);
 }
 
 .main-header-about {
@@ -126,6 +149,7 @@ img {
 .header-address {
   font-size: 14px;
   line-height: 24px;
+  font-style: normal;
   color: var(--basic-grey-dark);
 }
 
@@ -158,7 +182,7 @@ img {
 }
 
 .site-navigation-list a:active {
-  background-color: var(--header-panel);
+  background-color: var(--nav-background-active);
   opacity: 0.5;
 }
 
@@ -193,17 +217,26 @@ img {
 }
 
 .promo-button {
-  background: none;
+  background-color: var(--promo-button-background);
+}
+
+.promo-button:hover {
+  background-color: var(--promo-button-background-hover);
+}
+
+.promo-button:active {
+  background-color: var(--promo-button-background-active);
 }
 
 .slider-content {
-  background-color: var(--basic-grey-darkest);
+  background-color: var(--slider-background);
 }
 
 .slider-content h3 {
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .slider-content p {
@@ -212,8 +245,12 @@ img {
   line-height: 24px;
 }
 
-.slider-button:hover, .slider-button:active {
+.slider-button:hover {
   background-color: var(--basic-red-dart);
+}
+
+.slider-button:active {
+  background-color: var(--error);
 }
 
 .section-header {
@@ -225,6 +262,7 @@ img {
   line-height: 30px;
   font-weight: normal;
   color: var(--basic-grey-dark);
+  text-transform: uppercase;
 }
 
 .good-list {
@@ -280,6 +318,7 @@ img {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .service p {
@@ -314,12 +353,14 @@ img {
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-grey-dark);
+  text-transform: uppercase;
 }
 
 .about h2 {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .about p {
@@ -336,7 +377,7 @@ img {
 }
 
 .main-footer, .main-footer a {
-  color: var(--white);
+  color: var(--basic-background);
 }
 
 .main-footer-contacts, .footer-site-map {
@@ -348,6 +389,7 @@ img {
 
 .main-footer-contacts address {
   font-style: normal;
+  color: var(--background-grey);
 }
 
 .footer-site-map a:hover {
