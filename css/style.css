@@ -39,7 +39,7 @@
   --promo-button-background-active: rgba(169,169,169,0.3);
 
   --color-old-price: #A9A9A9;
-  --color-trancend: rgba(255, 255, 255, 0.5);
+  --color-trancend: rgba(255,255,255,0.5);
 }
 
 body {
@@ -109,6 +109,7 @@ img {
 .main-header-panel button {
   line-height: 24px;
   background-color: var(--basic-green);
+  color: var(--white);
 }
 
 .main-header-panel button:hover {
@@ -183,7 +184,7 @@ img {
 
 .site-navigation-list a:active {
   background-color: var(--nav-background-active);
-  opacity: 0.5;
+  color: var(--color-trancend);
 }
 
 .promo {
