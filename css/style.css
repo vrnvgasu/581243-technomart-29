@@ -43,6 +43,7 @@
   --color-old-price: #A9A9A9;
   --color-trancend: rgba(255,255,255,0.5);
   --color-black-trancend: rgba(0, 0, 0, 0.1);
+  --color-black-light: rgba(0, 0, 0, 0.3);
 
   --border-grey: #E5E5E5;
 }
@@ -399,7 +400,6 @@ img {
 
 .main-footer-contacts address {
   font-style: normal;
-  color: var(--background-grey);
 }
 
 .footer-site-map a:hover {
@@ -419,6 +419,11 @@ img {
   font-size: 16px;
   line-height: 18px;
   background-color: var(--header-panel);
+  color: var(--white);
+}
+
+.footer-social a {
+  color: var(--white);
 }
 
 .feedback a, .designed a {
@@ -470,7 +475,7 @@ img {
   font-size: 13px;
   line-height: 18px;
   background-color: var(--catalog-filters-background);
-  color: var(--color-black-trancend);
+  color: var(--color-black-light);
   border: none;
   border-bottom: 1px dashed var(--basic-red);
   padding: 0;
@@ -495,7 +500,8 @@ img {
   padding-bottom: 1px;
 }
 
-.nav_pages-item a {
+.nav_pages-list a {
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   border: 1px solid var(--border-grey);
