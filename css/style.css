@@ -321,6 +321,11 @@ img {
   line-height: 18px;
 }
 
+.producer-item a {
+  width: 220px;
+  height: 145px;
+}
+
 .service {
   background-color: var(--basic-background);
 }
@@ -585,12 +590,12 @@ img {
 
 .main-header-logo img {
   background-color: var(--basic-red);
-  padding: 13px 56px 18px 56px;
+  padding: 12px 56px 17px 56px;
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
 .main-footer-logo img {
   background-color: var(--basic-red);
-  padding: 21px 42px 26px 42px;
+  padding: 20px 42px 25px 42px;
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
