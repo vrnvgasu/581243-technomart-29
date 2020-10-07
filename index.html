@@ -9,7 +9,7 @@
   </head>
   <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation container">
+    <nav class="main-navigation">
       <div class="main-header-panel">
         <div class="container">
           <a class="main-header-logo"><img src="img/logo-technomart.svg" width="107" height="17" alt="Логотип ТЕХНОМАРТ"></a>
@@ -70,9 +70,9 @@
     </nav>
   </header>
 
-  <main class="main-content container">
+  <main class="main-content">
     <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-    <section class="promo">
+    <section class="promo container">
       <h2 class="visually-hidden">Промо-блок</h2>
       <ul class="promo-block-list">
         <li class="promo-block-item promo-materials">
@@ -138,7 +138,7 @@
         </div>
       </div>
     </section>
-    <section class="good">
+    <section class="good container">
       <div class="section-header">
         <h2>Популярные товары:</h2>
         <a href="" class="button good-all-button">все популярные товары</a>
@@ -146,7 +146,7 @@
       <ul class="good-list">
         <li class="good-item">
           <img src="img/bosch_bfg_9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-          <div class="visually-hidden">
+          <div class="good-item-buttons visually-hidden">
             <button type="button" class="button good-buy">КУПИТЬ</button>
             <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
           </div>
@@ -156,7 +156,7 @@
         </li>
         <li class="good-item">
           <img src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-          <div class="visually-hidden">
+          <div class="good-item-buttons visually-hidden">
             <button type="button" class="button good-buy">КУПИТЬ</button>
             <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
           </div>
@@ -166,7 +166,7 @@
         </li>
         <li class="good-item">
           <img src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-          <div class="visually-hidden">
+          <div class="good-item-buttons visually-hidden">
             <button type="button" class="button good-buy">КУПИТЬ</button>
             <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
           </div>
@@ -176,7 +176,7 @@
         </li>
         <li class="good-item">
           <img src="img/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-          <div class="visually-hidden">
+          <div class="good-item-buttons visually-hidden">
             <button type="button" class="button good-buy">КУПИТЬ</button>
             <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
           </div>
@@ -186,7 +186,7 @@
         </li>
       </ul>
     </section>
-    <section class="producer">
+    <section class="producer container">
       <div class="section-header">
         <h2>Популярные производители:</h2>
         <a href="" class="button producer-all-button">все производители</a>
@@ -219,52 +219,54 @@
       </ul>
     </section>
     <div class="service">
-      <section class="service-header">
-        <h2>Сервисы</h2>
-        <p>
-          Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
-      </section>
-      <ul class="service-list">
-        <li class="service-item service-item-active">
-          <button type="button" class="button service-item-button">Доставка</button>
-        </li>
-        <li class="service-item">
-          <button type="button" class="button service-item-button">Гарантия</button>
-        </li>
-        <li class="service-item">
-          <button type="button" class="button service-item-button">Кредит</button>
-        </li>
-      </ul>
-      <ul class="service-slider-list">
-        <li class="service-slider-item">
-          <h3>Доставка</h3>
+      <div class="service-wrapper container">
+        <section class="service-header">
+          <h2>Сервисы</h2>
           <p>
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+            Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-        </li>
-        <li class="service-slider-item visually-hidden">
-          <h3>Гарантия</h3>
-          <p>
-            Если купленный у нас товар поломается или заискрит,
-            а также в случае пожара, спровоцированного его
-            возгоранием, вы всегда можете быть уверены в нашей
-            гарантии. Мы обменяем сгоревший товар на новый.
-            Дом уж восстановите как-нибудь сами.
-          </p>
-        </li>
-        <li class="service-slider-item visually-hidden">
-          <h3>Кредит</h3>
-          <p>
-            Залезть в долговую яму стало проще!
-            Кредитные консультанты придут вам на помощь.
-          </p>
-          <button type="button" class="button service-slider-button">Отправить заявку</button>
-        </li>
-      </ul>
+        </section>
+        <ul class="service-list">
+          <li class="service-item service-item-active">
+            <button type="button" class="button service-item-button">Доставка</button>
+          </li>
+          <li class="service-item">
+            <button type="button" class="button service-item-button">Гарантия</button>
+          </li>
+          <li class="service-item">
+            <button type="button" class="button service-item-button">Кредит</button>
+          </li>
+        </ul>
+        <ul class="service-slider-list">
+          <li class="service-slider-item">
+            <h3>Доставка</h3>
+            <p>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+              Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+            </p>
+          </li>
+          <li class="service-slider-item visually-hidden">
+            <h3>Гарантия</h3>
+            <p>
+              Если купленный у нас товар поломается или заискрит,
+              а также в случае пожара, спровоцированного его
+              возгоранием, вы всегда можете быть уверены в нашей
+              гарантии. Мы обменяем сгоревший товар на новый.
+              Дом уж восстановите как-нибудь сами.
+            </p>
+          </li>
+          <li class="service-slider-item visually-hidden">
+            <h3>Кредит</h3>
+            <p>
+              Залезть в долговую яму стало проще!
+              Кредитные консультанты придут вам на помощь.
+            </p>
+            <button type="button" class="button service-slider-button">Отправить заявку</button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="about">
+    <div class="about container">
       <section class="about-features">
         <h2>Компания «Техномарт»</h2>
         <p>
@@ -340,32 +342,34 @@
         </ul>
       </section>
     </div>
-    <div class="footer-bottom container">
-      <p class="footer-copyright">
-        © 2010–2019 Компания «Техномарт» Все права защищены
-      </p>
-      <section class="footer-social">
-        <h2 class="visually-hidden">Давайте дружить!</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a href="" class="social-button"><svg width="26" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.54 11.73c.92-.3 2.1 1.91 3.35 2.75.95.64 1.67.5 1.67.5l3.34-.04s1.75-.1.92-1.46c-.07-.11-.48-1-2.49-2.83-2.1-1.92-1.8-1.6.72-4.92C24.58 3.71 25.2 2.48 25 1.95c-.19-.5-1.32-.37-1.32-.37l-3.77.03c-.36 0-.67.1-.82.48 0 0-.6 1.56-1.39 2.89-1.67 2.8-2.34 2.95-2.62 2.77-.64-.4-.48-1.63-.48-2.5 0-2.71.42-3.84-.81-4.14-.41-.1-.71-.16-1.76-.17-1.34-.02-2.48 0-3.12.31-.43.21-.76.67-.56.7.25.03.8.14 1.11.54.39.52.37 1.68.37 1.68s.22 3.2-.52 3.6c-.5.27-1.2-.29-2.7-2.83-.76-1.3-1.34-2.74-1.34-2.74s-.1-.27-.3-.42c-.25-.17-.59-.22-.59-.22l-3.57.02s-.54.01-.74.24c-.17.2-.01.63-.01.63s2.8 6.45 5.97 9.7c2.9 2.98 6.21 2.79 6.21 2.79h1.5s.45-.05.68-.3c.22-.22.21-.64.21-.64s-.03-1.98.9-2.27z" fill="#fff"/></svg></a>
-          </li>
-          <li class="footer-social-item">
-            <a href="" class="social-button"><svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg></a>
-          </li>
-          <li class="footer-social-item">
-            <a href="" class="social-button"><svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.18a6.5 6.5 0 1012.64 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/></svg></a>
-          </li>
-        </ul>
-      </section>
-      <p class="feedback">
-        Обратная связь:
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </p>
-      <p class="designed">
-        Разработано —
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
-      </p>
+    <div class="footer-bottom">
+      <div class="footer-bottom-wrapper container">
+        <p class="footer-copyright">
+          © 2010–2019 Компания «Техномарт» Все права защищены
+        </p>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Давайте дружить!</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a href="" class="social-button"><svg width="26" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.54 11.73c.92-.3 2.1 1.91 3.35 2.75.95.64 1.67.5 1.67.5l3.34-.04s1.75-.1.92-1.46c-.07-.11-.48-1-2.49-2.83-2.1-1.92-1.8-1.6.72-4.92C24.58 3.71 25.2 2.48 25 1.95c-.19-.5-1.32-.37-1.32-.37l-3.77.03c-.36 0-.67.1-.82.48 0 0-.6 1.56-1.39 2.89-1.67 2.8-2.34 2.95-2.62 2.77-.64-.4-.48-1.63-.48-2.5 0-2.71.42-3.84-.81-4.14-.41-.1-.71-.16-1.76-.17-1.34-.02-2.48 0-3.12.31-.43.21-.76.67-.56.7.25.03.8.14 1.11.54.39.52.37 1.68.37 1.68s.22 3.2-.52 3.6c-.5.27-1.2-.29-2.7-2.83-.76-1.3-1.34-2.74-1.34-2.74s-.1-.27-.3-.42c-.25-.17-.59-.22-.59-.22l-3.57.02s-.54.01-.74.24c-.17.2-.01.63-.01.63s2.8 6.45 5.97 9.7c2.9 2.98 6.21 2.79 6.21 2.79h1.5s.45-.05.68-.3c.22-.22.21-.64.21-.64s-.03-1.98.9-2.27z" fill="#fff"/></svg></a>
+            </li>
+            <li class="footer-social-item">
+              <a href="" class="social-button"><svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"/></svg></a>
+            </li>
+            <li class="footer-social-item">
+              <a href="" class="social-button"><svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15a3 3 0 013 3v15a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM3 18V9h1.18a6.5 6.5 0 1012.64 0H18v9H3zM14 7h4V3h-4v4z" fill="#fff"/></svg></a>
+            </li>
+          </ul>
+        </section>
+        <p class="feedback">
+          Обратная связь:
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="designed">
+          Разработано —
+          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
+        </p>
+      </div>
     </div>
   </footer>
   </body>
