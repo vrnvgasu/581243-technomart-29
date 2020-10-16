@@ -1203,6 +1203,7 @@ h1, h2, h3 {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-navigation-list {
@@ -1268,6 +1269,7 @@ h1, h2, h3 {
 
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   margin-top: 5px;
