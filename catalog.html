@@ -14,15 +14,15 @@
         <div class="main-header-panel-wrapper container">
           <a href="index.html" class="main-header-logo"><img src="img/logo-technomart.svg" width="107" height="17" alt="Логотип ТЕХНОМАРТ"></a>
           <label class="main-header-search" for="test">
-            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff" opacity=".3"/></svg>
             <input type="search" class="search" placeholder="Поиск:" id="test">
+            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff" opacity=".3"/></svg>
           </label>
           <div class="utility-panel">
-            <a href="">
-              <svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 15c0 .55-.37.74-.82.43l-5.36-3.77a1.54 1.54 0 00-1.64 0L.82 15.43c-.45.31-.82.12-.82-.43V1a1 1 0 011-1h12a1 1 0 011 1v14z" fill="#fff" opacity=".3"/></svg>
+            <a href="" class="bookmark utility-panel-button">
+              <svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 15c0 .55-.37.74-.82.43l-5.36-3.77a1.54 1.54 0 00-1.64 0L.82 15.43c-.45.31-.82.12-.82-.43V1a1 1 0 011-1h12a1 1 0 011 1v14z" fill="#fff"  opacity=".3"/></svg>
               Закладки: <output>0</output>
             </a>
-            <a href="" class="basket-active">
+            <a href="" class="basket utility-panel-button basket-active">
               <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
               Корзина: <output>10</output>
             </a>
@@ -33,12 +33,12 @@
       <div class="info-panel container">
         <section class="main-header-contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <div>
-            <i class="main-header-about">Интернет-магазин
-              строительных материалов
+          <p>
+            <i class="main-header-about">Интернет-магазин<br>
+              строительных материалов<br>
               и инструментов для ремонта</i>
-          </div>
-          <div>
+          </p>
+          <div class="header-contacts">
             <a href="tel:+78125550555" class="header-phone">
               <svg width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.57 18.98h-.94a14.53 14.53 0 01-9.36-4.86 16.33 16.33 0 01-4.3-9.9V3.09c.09-.77.47-1.3.9-1.75C2.43.77 3.26.04 4 .02 4.56 0 5.5.4 5.88.92c.33.44.5 1.34.66 2 .15.67.5 1.64.4 2.29-.14 1-1.48 1.43-1.87 2.17a14.03 14.03 0 006.29 7.03c.71-.4 1.35-1.57 2.33-1.6.36 0 .82.18 1.19.29.4.12.74.27 1.1.4.6.23 1.65.53 2 1.03.37.51.57 1.35.5 1.88-.17 1.04-1.89 2.2-2.9 2.57z" fill="#B7BFC8"/></svg>
               +7 (812) 555-05-55
@@ -100,7 +100,88 @@
       <h1 class="page-title">ПЕРФОРАТОРЫ</h1>
       <section class="goods-filter">
         <h2>ФИЛЬТР:</h2>
-        <!--Пока без формы-->
+        <form class="catalog-filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="form-price">
+            <legend>Цена:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 83%;"></div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 0;"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: 78%;"></div>
+                </div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="number" name="min-price" value="0" readonly>
+                </label>
+                &mdash;
+                <label class="max-price">
+                  <input type="number" name="max-price" value="30000" readonly>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-producers">
+            <legend>Производители:</legend>
+            <ul>
+              <li class="filter-option filter-checkbox">
+                <label for="filter-producer-bosch">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-bosch" id="filter-producer-bosch" checked>
+                  <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                  <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                  Bosch
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label for="filter-producer-interskol">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-interskol">
+                  <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                  <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                  Интерскол
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label for="filter-producer-makita">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-makita" checked>
+                  <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                  <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                  Makita
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label for="filter-producer-dewalt">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-dewalt">
+                  <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                  <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                  Dewalt
+                </label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <label for="filter-producer-hitachi">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-hitachi">
+                  <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
+                  <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
+                  Hitachi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form-supply">
+            <legend>Питание:</legend>
+            <ul>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="supply-group" value="shaving" id="filter-supply-rechargeable" checked>
+                <label for="filter-supply-rechargeable">Аккумуляторные</label>
+              </li>
+              <li class="filter-option filter-radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="supply-group" value="hair-care" id="filter-supply-mains">
+                <label for="filter-supply-mains">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="button goods-filter-button">Показать</button>
+        </form>
       </section>
       <section class="goods-sort">
         <h2>СОРТИРОВКА:</h2>
@@ -116,41 +197,24 @@
           </li>
         </ul>
         <div class="goods-sort-change">
-          <label><input type="radio" name="sort" value="ascending" class="button button-sort-ascending" checked></label>
-          <label><input type="radio" name="sort" value="descending" class="button button-sort-descending"></label>
+          <button type="button" class="button button-sort-ascending sort-active">
+            <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0h11" fill="#C5C5C5"/></svg>
+          </button>
+          <button type="button" class="button ">
+            <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0h11" fill="#C5C5C5"/></svg>
+          </button>
         </div>
       </section>
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="good-list">
           <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
-            <div class="good-item-buttons visually-hidden">
-              <button type="button" class="button good-buy">
-                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
-                КУПИТЬ
-              </button>
-              <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
+            <div class="flag-wrapper hidden">
+              <div class="flag"><span>NEW</span></div>
             </div>
-            <h3>Перфоратор BOSCH BFG 6000</h3>
-            <del>30500 Р.</del>
-            <a href="" class="button good-view">25500 Р.</a>
-          </li>
-          <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
-            <div class="good-item-buttons visually-hidden">
-              <button type="button" class="button good-buy">
-                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
-                КУПИТЬ
-              </button>
-              <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
+            <div class="good-img">
+              <img class="bosch-6000" src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
             </div>
-            <h3>Перфоратор BOSCH BFG 6000</h3>
-            <del>30500 Р.</del>
-            <a href="" class="button good-view">25500 Р.</a>
-          </li>
-          <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_6000.jpg" class="visually-hidden" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
             <div class="good-item-buttons">
               <button type="button" class="button good-buy">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
@@ -163,21 +227,13 @@
             <a href="" class="button good-view">25500 Р.</a>
           </li>
           <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></div>
-            <div class="good-item-buttons visually-hidden">
-              <button type="button" class="button good-buy">
-                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
-                КУПИТЬ
-              </button>
-              <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
+            <div class="flag-wrapper hidden">
+              <div class="flag"><span>NEW</span></div>
             </div>
-            <h3>Перфоратор BOSCH BFG 3000</h3>
-            <del>22500 Р.</del>
-            <a href="" class="button good-view">15500 Р.</a>
-          </li>
-          <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
-            <div class="good-item-buttons visually-hidden">
+            <div class="good-img">
+              <img class="bosch-6000" src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+            </div>
+            <div class="good-item-buttons">
               <button type="button" class="button good-buy">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
                 КУПИТЬ
@@ -189,8 +245,67 @@
             <a href="" class="button good-view">25500 Р.</a>
           </li>
           <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></div>
-            <div class="good-item-buttons visually-hidden">
+            <div class="flag-wrapper">
+              <div class="flag"><span>NEW</span></div>
+            </div>
+            <div class="good-img">
+              <img class="bosch-6000" src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+            </div>
+            <div class="good-item-buttons">
+              <button type="button" class="button good-buy">
+                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
+                КУПИТЬ
+              </button>
+              <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
+            </div>
+            <h3>Перфоратор BOSCH BFG 6000</h3>
+            <del>30500 Р.</del>
+            <a href="" class="button good-view">25500 Р.</a>
+          </li>
+          <li class="good-item">
+            <div class="flag-wrapper">
+              <div class="flag"><span>NEW</span></div>
+            </div>
+            <div class="good-img">
+              <img class="bosch-3000" src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+            </div>
+            <div class="good-item-buttons">
+              <button type="button" class="button good-buy">
+                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
+                КУПИТЬ
+              </button>
+              <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
+            </div>
+            <h3>Перфоратор BOSCH BFG 3000</h3>
+            <del>22500 Р.</del>
+            <a href="" class="button good-view">15500 Р.</a>
+          </li>
+          <li class="good-item">
+            <div class="flag-wrapper hidden">
+              <div class="flag"><span>NEW</span></div>
+            </div>
+            <div class="good-img">
+              <img class="bosch-6000" src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+            </div>
+            <div class="good-item-buttons">
+              <button type="button" class="button good-buy">
+                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
+                КУПИТЬ
+              </button>
+              <button type="button" class="button good-bookmark">В ЗАКЛАДКИ</button>
+            </div>
+            <h3>Перфоратор BOSCH BFG 6000</h3>
+            <del>30500 Р.</del>
+            <a href="" class="button good-view">25500 Р.</a>
+          </li>
+          <li class="good-item">
+            <div class="flag-wrapper">
+              <div class="flag"><span>NEW</span></div>
+            </div>
+            <div class="good-img">
+              <img class="bosch-2000" src="img/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+            </div>
+            <div class="good-item-buttons">
               <button type="button" class="button good-buy">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
                 КУПИТЬ
@@ -202,8 +317,13 @@
             <a href="" class="button good-view">12500 Р.</a>
           </li>
           <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></div>
-            <div class="good-item-buttons visually-hidden">
+            <div class="flag-wrapper">
+              <div class="flag"><span>NEW</span></div>
+            </div>
+            <div class="good-img">
+              <img class="bosch-3000" src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+            </div>
+            <div class="good-item-buttons">
               <button type="button" class="button good-buy">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
                 КУПИТЬ
@@ -215,8 +335,13 @@
             <a href="" class="button good-view">15500 Р.</a>
           </li>
           <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></div>
-            <div class="good-item-buttons visually-hidden">
+            <div class="flag-wrapper hidden">
+              <div class="flag"><span>NEW</span></div>
+            </div>
+            <div class="good-img">
+              <img class="bosch-6000" src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+            </div>
+            <div class="good-item-buttons">
               <button type="button" class="button good-buy">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
                 КУПИТЬ
@@ -228,8 +353,13 @@
             <a href="" class="button good-view">25500 Р.</a>
           </li>
           <li class="good-item">
-            <div class="good-img"><img src="img/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></div>
-            <div class="good-item-buttons visually-hidden">
+            <div class="flag-wrapper">
+              <div class="flag"><span>NEW</span></div>
+            </div>
+            <div class="good-img">
+              <img class="bosch-2000" src="img/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+            </div>
+            <div class="good-item-buttons">
               <button type="button" class="button good-buy">
                 <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
                 КУПИТЬ
@@ -260,11 +390,11 @@
     <div class="seo-content">
       <article class="seo-content-wrapper container">
         <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-        <p>
-          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
-          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-        </p>
+        <div class="seo-content-body">
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+          <p>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.</p>
+          <p>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+        </div>
       </article>
     </div>
   </main>
@@ -275,7 +405,7 @@
         <h2 class="visually-hidden">Контакты</h2>
         <a href="index.html" class="main-footer-logo"><img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип ТЕХНОМАРТ"></a>
         <address class="footer-address">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           <a href="tel:+78125550555" class="footer-phone">+7 (812) 555-05-55</a>
         </address>
       </section>
@@ -317,7 +447,7 @@
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper container">
         <p class="footer-copyright">
-          © 2010–2019 Компания «Техномарт» Все права защищены
+          © 2010–2019 Компания «Техномарт»<br> Все права защищены
         </p>
         <section class="footer-social">
           <h2 class="visually-hidden">Давайте дружить!</h2>
