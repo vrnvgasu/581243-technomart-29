@@ -51,6 +51,7 @@
   --border-grey-dart: #405069;
 
   --popup-shadow: rgba(0, 0, 0, 0.15);
+  --popap-basket: #F1F1F1;
 
   --black-light: rgba(0, 0, 0, 0.24);
 
@@ -2092,4 +2093,69 @@ li.filter-option:hover label::after {
 
 .map-preview {
   cursor: pointer;
+}
+
+.basket-info {
+  width: 620px;
+  height: 282px;
+  background-color: var(--white);
+  top: 50%;
+  left: 50%;
+  margin-top: -141px;
+  margin-left: -320px;
+}
+
+.basket-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket-info .popup-close {
+  top: 12px;
+}
+
+.basket-info p {
+  margin: 67px 0 0 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: 'Cuprum', Arial, sans-serif;
+  position: relative;
+}
+
+.basket-info p::before {
+  content: "";
+  position: absolute;
+  background: url("../img/icon-mark.svg") no-repeat 0 0;
+  width: 66px;
+  height: 66px;
+  top: -19px;
+  left: -95px;
+}
+
+.basket-info-actions {
+  height: 112px;
+  width: 100%;
+  background-color: var(--popap-basket);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basket-info-actions .button {
+  width: 192px;
+  height: 38px;
+  padding-right: 2px;
+  cursor: pointer;
+}
+
+.basket-info-make-order {
+  margin-right: 10px;
+}
+
+.basket-info-proceed {
+  background-color: var(--white);
+  color: var(--black);
 }
