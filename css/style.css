@@ -265,7 +265,7 @@ h1, h2, h3 {
   z-index: 10;
 }
 
-.utility-panel-button:active path, .utility-panel-button:active g {
+.bookmark:active path, .basket:active g {
   opacity: 0.3;
 }
 
