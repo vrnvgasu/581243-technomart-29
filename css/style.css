@@ -2087,11 +2087,15 @@ li.filter-option:hover label::after {
   margin-top: calc(-449px/2);
 }
 
-.contacts-map .popup-close {
-  top: 8px;
+.contacts-map iframe {
+  border: none;
 }
 
 .map-preview {
+  cursor: pointer;
+}
+
+.about-contacts img {
   cursor: pointer;
 }
 
@@ -2102,7 +2106,7 @@ li.filter-option:hover label::after {
   top: 50%;
   left: 50%;
   margin-top: -141px;
-  margin-left: -320px;
+  margin-left: -293px;
 }
 
 .basket-info-wrapper {
@@ -2142,6 +2146,7 @@ li.filter-option:hover label::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 67px;
 }
 
 .basket-info-actions .button {
