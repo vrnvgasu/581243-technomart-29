@@ -1844,6 +1844,7 @@ li.filter-option:hover label::after {
   justify-content: flex-start;
   text-align: center;
   height: 150px;
+  padding-right: 2px;
 }
 
 .good-buy, .good-bookmark {
@@ -1862,15 +1863,19 @@ li.filter-option:hover label::after {
   border: none;
   color: var(--white);
   background-color: var(--basic-green);
-  margin-top: 38px;
+  margin-top: 37px;
   margin-bottom: 10px;
   box-shadow: inset 0px -3px 0px #367315;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 1px;
 }
 
 .good-buy svg {
-  margin-right: 9px;
+  margin-right: 8px;
+  margin-left: 29px;
+  margin-bottom: 4px;
 }
 
 .good-buy:hover {
