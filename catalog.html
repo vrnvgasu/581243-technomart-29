@@ -13,10 +13,12 @@
       <div class="main-header-panel">
         <div class="main-header-panel-wrapper container">
           <a href="index.html" class="main-header-logo"><img src="img/logo-technomart.svg" width="107" height="17" alt="Логотип ТЕХНОМАРТ"></a>
-          <label class="main-header-search" for="test">
-            <input type="search" class="search" placeholder="Поиск:" id="test">
-            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff" opacity=".3"/></svg>
-          </label>
+          <form>
+            <label class="main-header-search" for="test">
+              <input type="search" class="search" placeholder="Поиск:" id="test">
+              <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff" opacity=".3"/></svg>
+            </label>
+          </form>
           <div class="utility-panel">
             <a href="" class="bookmark utility-panel-button">
               <svg width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 15c0 .55-.37.74-.82.43l-5.36-3.77a1.54 1.54 0 00-1.64 0L.82 15.43c-.45.31-.82.12-.82-.43V1a1 1 0 011-1h12a1 1 0 011 1v14z" fill="#fff"  opacity=".3"/></svg>
@@ -126,40 +128,40 @@
             <legend>Производители:</legend>
             <ul>
               <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-bosch" id="filter-producer-bosch" checked>
                 <label for="filter-producer-bosch">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-bosch" id="filter-producer-bosch" checked>
                   <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
                   <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
                   Bosch
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-interskol">
                 <label for="filter-producer-interskol">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-interskol">
                   <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
                   <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
                   Интерскол
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-makita" checked>
                 <label for="filter-producer-makita">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-makita" checked>
                   <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
                   <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
                   Makita
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-dewalt">
                 <label for="filter-producer-dewalt">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-dewalt">
                   <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
                   <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
                   Dewalt
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-hitachi">
                 <label for="filter-producer-hitachi">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="filter-producer-interskol" id="filter-producer-hitachi">
                   <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.54-.46-1-1-1H3c-.54 0-1 .46-1 1v17c0 .54.46 1 1 1h17c.54 0 1-.46 1-1V3z" fill="#C5C5C5"/></svg>
                   <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z" fill="#C5C5C5"/><path d="M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z" fill="#C5C5C5"/></svg>
                   Hitachi
@@ -468,7 +470,7 @@
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
         <p class="designed">
-          Разработано —
+          Разработано &mdash;
           <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a>
         </p>
       </div>

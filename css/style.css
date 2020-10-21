@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 :root {
   --basic-red: #EE3643;
   --basic-red-dart: #CA2C37;
@@ -107,6 +114,7 @@ h1, h2, h3 {
 .page-body {
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -119,6 +127,7 @@ h1, h2, h3 {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -244,6 +253,16 @@ h1, h2, h3 {
   opacity: 1;
 }
 
+.search::-webkit-input-placeholder {
+  color: var(--white);
+  opacity: 1;
+}
+
+.search::-moz-placeholder {
+  color: var(--white);
+  opacity: 1;
+}
+
 .search::placeholder {
   color: var(--white);
   opacity: 1;
@@ -316,6 +335,14 @@ h1, h2, h3 {
 
 .search:focus {
   background-color: var(--white);
+}
+
+.search:focus::-webkit-input-placeholder {
+  color: var(--black);
+}
+
+.search:focus::-moz-placeholder {
+  color: var(--black);
 }
 
 .search:focus::placeholder {
@@ -651,7 +678,7 @@ h1, h2, h3 {
   margin-left: 23px;
   box-sizing: border-box;
   padding-top: 0;
- }
+}
 
 .promo-button:hover {
   background-color: var(--promo-button-background-hover);
@@ -980,6 +1007,7 @@ h1, h2, h3 {
 .service-wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content;
 }
 
@@ -1404,6 +1432,7 @@ h1, h2, h3 {
 .main-catalog {
   display: grid;
   grid-template-columns: 3fr 9fr;
+  grid-template-rows: repeat(2, -webkit-min-content) 1fr;
   grid-template-rows: repeat(2, min-content) 1fr;
   gap: 20px;
 }
@@ -1426,6 +1455,7 @@ h1, h2, h3 {
   grid-column: 1 / 2;
   grid-row: -3 / -1;
   display: grid;
+  grid-template-rows: 38px -webkit-min-content;
   grid-template-rows: 38px min-content;
 }
 
@@ -1488,6 +1518,7 @@ h1, h2, h3 {
   padding-left: 36px;
   font-size: 15px;
   line-height: 19px;
+  position: relative;
 }
 
 .form-supply .filter-option:not(:first-child) {
@@ -1498,6 +1529,8 @@ h1, h2, h3 {
   position: relative;
   display: block;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
 }
 
@@ -1505,7 +1538,16 @@ li.filter-option:hover path {
   fill: var(--checked);
 }
 
-.filter-input-checkbox ~ .icon-checkbox-off {
+.filter-input:disabled ~ svg path {
+  fill: var(--checked);
+  opacity: 0.3;
+}
+
+.filter-input:disabled ~ label {
+  opacity: 0.4;
+}
+
+.filter-input-checkbox ~ label .icon-checkbox-off {
   position: absolute;
   left: -35px;
   top: -2px;
@@ -1515,11 +1557,11 @@ li.filter-option:hover path {
   display: none;
 }
 
-.filter-input-checkbox:checked ~ .icon-checkbox-off {
+.filter-input-checkbox:checked ~ label .icon-checkbox-off {
   display: none;
 }
 
-.filter-input-checkbox:checked ~ .icon-checkbox-on {
+.filter-input-checkbox:checked ~ label .icon-checkbox-on {
   display: block;
   position: absolute;
   top: -2px;
@@ -1627,6 +1669,7 @@ li.filter-option:hover label::after {
   line-height: 18px;
   padding: 10px 0 10px 14px;
   box-sizing: border-box;
+  outline: none;
 }
 
 .goods-filter-button {
@@ -2063,6 +2106,24 @@ li.filter-option:hover label::after {
   font-weight: normal;
 }
 
+.write-us-form input::-webkit-input-placeholder, .write-us-form textarea::-webkit-input-placeholder {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--color-old-price);
+}
+
+.write-us-form input::-moz-placeholder, .write-us-form textarea::-moz-placeholder {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--color-old-price);
+}
+
 .write-us-form input::placeholder, .write-us-form textarea::placeholder {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
@@ -2093,6 +2154,8 @@ li.filter-option:hover label::after {
 
 .contacts-map iframe {
   border: none;
+  width: 943px;
+  height: 444px;
 }
 
 .map-preview {
