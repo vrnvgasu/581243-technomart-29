@@ -28,7 +28,7 @@
               <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
               Корзина: <output>0</output>
             </a>
-            <button type="button">Оформить заказ</button>
+            <a href="" class="button make-order">Оформить заказ</a>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@
             </figure>
             <a href="catalog.html" class="button slider-button">ОТКРЫТЬ КАТАЛОГ</a>
           </li>
-          <li class="promo-slider-item visually-hidden">
+          <li class="promo-slider-item hidden">
             <div class="slider-content">
               <h3>Дрели</h3>
               <p>Соседям на радость!</p>
@@ -134,10 +134,12 @@
             <a href="catalog.html" class="button slider-button">ОТКРЫТЬ КАТАЛОГ</a>
           </li>
         </ul>
-        <div class="slider-controls">
-          <button type="button" class="slider-controls-button" aria-label="Дрели"></button>
-          <button type="button" class="slider-controls-current slider-controls-button" aria-label="Перфораторы"></button>
-        </div>
+        <form class="slider-controls">
+          <input type="radio" class="visually-hidden" name="slider" value="slide-1" id="slider-controls-slide-1">
+          <label for="slider-controls-slide-1" class="slider-controls-button"></label>
+          <input type="radio" class="visually-hidden" name="slider" value="slide-2"  id="slider-controls-slide-2" checked>
+          <label for="slider-controls-slide-2" class="slider-controls-button"></label>
+        </form>
         <div class="slider-navigation">
           <button type="button" class="button slider-button-back"></button>
           <button type="button" class="button slider-button-next"></button>
@@ -290,7 +292,7 @@
               Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
             </p>
           </li>
-          <li class="service-slider-item  visually-hidden  service-guarantee">
+          <li class="service-slider-item hidden service-guarantee">
             <h3>Гарантия</h3>
             <p>
               Если купленный у нас товар поломается или заискрит,<br>
@@ -300,7 +302,7 @@
               Дом уж восстановите как-нибудь сами.
             </p>
           </li>
-          <li class="service-slider-item visually-hidden service-credit">
+          <li class="service-slider-item hidden service-credit">
             <h3>Кредит</h3>
             <p>
               Залезть в долговую яму стало проще!<br>

@@ -73,7 +73,7 @@ body {
   min-width: 940px;
   margin: 0;
   padding: 0;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-style: normal;
@@ -302,15 +302,16 @@ h1, h2, h3 {
   margin-left: 12px;
 }
 
-.utility-panel button {
+.utility-panel .make-order {
   line-height: 24px;
   background-color: var(--basic-green);
   color: var(--white);
   border: none;
   outline: none;
   padding-bottom: 0;
-  padding-left: 7px;
+  padding-left: 4px;
   width: 150px;
+  text-transform: none;
 }
 
 .main-header-panel button:hover {
@@ -827,7 +828,7 @@ h1, h2, h3 {
   margin-right: 10px;
 }
 
-.slider-controls-current::before {
+input:checked + .slider-controls-button::before {
   content: "";
   position: absolute;
   height: 6px;
@@ -849,7 +850,7 @@ h1, h2, h3 {
 }
 
 .good-list {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1029,7 +1030,7 @@ h1, h2, h3 {
 }
 
 .service p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
@@ -1172,7 +1173,7 @@ h1, h2, h3 {
 }
 
 .about p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
@@ -1422,7 +1423,7 @@ h1, h2, h3 {
 }
 
 .breadcrumbs-item a {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1664,7 +1665,7 @@ li.filter-option:hover label::after {
   border: none;
   border-radius: 2px;
   background-color: var(--catalog-filters-background);
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   padding: 10px 0 10px 14px;
@@ -1693,7 +1694,7 @@ li.filter-option:hover label::after {
 }
 
 .goods-filter, .goods-sort {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -1807,7 +1808,7 @@ li.filter-option:hover label::after {
 }
 
 .nav_page a {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   border: 1px solid var(--border-grey);
@@ -1869,7 +1870,7 @@ li.filter-option:hover label::after {
 }
 
 .seo-content-body p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -1890,7 +1891,7 @@ li.filter-option:hover label::after {
 }
 
 .good-buy, .good-bookmark {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
@@ -1999,7 +2000,7 @@ li.filter-option:hover label::after {
   color: var(--white);
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   right: -25px;
   bottom: 35px;
@@ -2099,7 +2100,7 @@ li.filter-option:hover label::after {
 }
 
 .write-us-form label {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
@@ -2107,7 +2108,7 @@ li.filter-option:hover label::after {
 }
 
 .write-us-form input::-webkit-input-placeholder, .write-us-form textarea::-webkit-input-placeholder {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-style: normal;
@@ -2116,7 +2117,7 @@ li.filter-option:hover label::after {
 }
 
 .write-us-form input::-moz-placeholder, .write-us-form textarea::-moz-placeholder {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-style: normal;
@@ -2125,7 +2126,7 @@ li.filter-option:hover label::after {
 }
 
 .write-us-form input::placeholder, .write-us-form textarea::placeholder {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-style: normal;
@@ -2192,7 +2193,7 @@ li.filter-option:hover label::after {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   position: relative;
 }
 
