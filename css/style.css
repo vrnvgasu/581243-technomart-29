@@ -143,7 +143,7 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   border: none;
-  outline: none;
+  outline-color: var(--black);
   padding-top: 2px;
   box-sizing: border-box;
 }
@@ -307,7 +307,6 @@ h1, h2, h3 {
   background-color: var(--basic-green);
   color: var(--white);
   border: none;
-  outline: none;
   padding-bottom: 0;
   padding-left: 4px;
   width: 150px;
@@ -794,6 +793,11 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
+.slider-navigation .button:focus {
+  outline: none;
+  box-shadow: 2px 2px 1px var(--basic-grey-darkest);
+}
+
 .slider-button-back {
   transform: rotate(135deg);
 }
@@ -814,7 +818,6 @@ h1, h2, h3 {
 .slider-controls-button {
   width: 10px;
   height: 10px;
-  outline: none;
   border: none;
   background-color: var(--white);
   border-radius: 50%;
@@ -822,6 +825,10 @@ h1, h2, h3 {
   position: relative;
   cursor: pointer;
   z-index: 1;
+}
+
+.slider-controls-input:focus + label {
+  box-shadow: 0 0 1px 2px var(--basic-grey-darkest);
 }
 
 .slider-controls-button:not(:last-child) {
@@ -1925,7 +1932,7 @@ li.filter-option:hover label::after {
   background-color: var(--success);
 }
 
-.good-buy:active {
+.good-buy:active, .good-buy:focus {
   background-color: var(--basic-green-dark);
 }
 
@@ -1939,7 +1946,7 @@ li.filter-option:hover label::after {
   border-color: var(--basic-grey-dark);
 }
 
-.good-bookmark:active {
+.good-bookmark:active, .good-bookmark:focus {
   border-color: var(--basic-grey-dark-trancend);
   color: var(--basic-grey-dark-trancend);
 }
