@@ -1546,9 +1546,9 @@ li.filter-option:hover path {
   fill: var(--checked);
 }
 
-.filter-input:disabled ~ svg path {
+.filter-input:disabled ~ label svg path,
+.filter-input:focus ~ label svg path {
   fill: var(--checked);
-  opacity: 0.3;
 }
 
 .filter-input:disabled ~ label {
@@ -1607,6 +1607,14 @@ li.filter-option:hover label::after {
   background-color: var(--checked);
 }
 
+.filter-input-radio:focus + label::before {
+  border-color: var(--checked);
+}
+
+.filter-input-radio:focus + label::after {
+  background-color: var(--checked);
+}
+
 .range-filter {
   width: 220px;
   margin-bottom: 25px;
@@ -1647,7 +1655,11 @@ li.filter-option:hover label::after {
   border-radius: 50%;
   box-shadow: 0 2px var(--range-toggle-light);
   cursor: pointer;
+}
+
+.scale .toggle:focus {
   outline: none;
+  box-shadow: 0 0 2px 1px var(--basic-grey-darkest);
 }
 
 .scale .toggle-min {
@@ -1675,9 +1687,15 @@ li.filter-option:hover label::after {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
-  padding: 10px 0 10px 14px;
+  padding: 10px 0;
   box-sizing: border-box;
   outline: none;
+  -moz-appearance: textfield;
+}
+
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .goods-filter-button {
@@ -1753,7 +1771,8 @@ li.filter-option:hover label::after {
   outline: none;
 }
 
-.button-sort:hover {
+.button-sort:hover,
+.button-sort:focus {
   color: var(--black);
   border-bottom: 1px solid var(--basic-red);
   padding-bottom: 1px;
@@ -1779,8 +1798,14 @@ li.filter-option:hover label::after {
   padding-left: 9px;
 }
 
-.goods-sort-change .button {
+.goods-sort-button {
   background-color: transparent;
+  outline: none;
+}
+
+.goods-sort-button:hover path,
+.goods-sort-button:focus path{
+  fill: var(--black);
 }
 
 .button-sort-ascending {
