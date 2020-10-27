@@ -2052,6 +2052,7 @@ li.filter-option:hover label::after {
 }
 
 .popup {
+  display: none;
   background-color: var(--white);
   z-index: 100;
   border-top: 7px solid var(--basic-red);
@@ -2172,7 +2173,7 @@ li.filter-option:hover label::after {
   margin-top: auto;
 }
 
-.write-us-button {
+.write-us-submit {
   width: 460px;
   height: 38px;
   margin: 37px auto 0 auto;
@@ -2263,4 +2264,27 @@ li.filter-option:hover label::after {
 .basket-info-proceed {
   background-color: var(--white);
   color: var(--black);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
