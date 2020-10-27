@@ -10,6 +10,10 @@ const mapPreviewElement = document.querySelector(`.map-preview`);
 const contactsMapElement = document.querySelector(`.contacts-map`);
 const serviceItemElements = document.querySelectorAll(`.service-item`);
 const serviceSliderItemElements = document.querySelectorAll(`.service-slider-item`);
+const promoSliderItemElements = document.querySelectorAll(`.promo-slider-item`);
+const sliderButtonBackElement = document.querySelector(`.slider-button-back`);
+const sliderButtonNextElement = document.querySelector(`.slider-button-next`);
+const sliderControlsForm = document.querySelector(`.slider-controls`);
 
 let isStorageSupport = true;
 let storage = {};
@@ -120,12 +124,64 @@ let addServiceSliderHandlers = () => {
   });
 }
 
+let flipThoughPromoSliders = (evt, getPosition) => {
+  evt.preventDefault();
+
+  for (let i in promoSliderItemElements) {
+    if (promoSliderItemElements[i].classList.contains(`hidden`)) {
+      continue;
+    }
+
+    promoSliderItemElements[i].classList.add(`hidden`);
+    let position = getPosition(i);
+    promoSliderItemElements[position].classList.remove(`hidden`);
+
+    let dataset = promoSliderItemElements[position].dataset.slide;
+    let radioInput = sliderControlsForm.querySelector(`#${dataset}`);
+    radioInput.checked = true;
+
+    break;
+  }
+};
+
+let onSliderButtonNextElementClick = (evt) => {
+  flipThoughPromoSliders(evt, (i) => (+i === promoSliderItemElements.length - 1) ? 0 : +i + 1);
+};
+
+let onSliderButtonBackElementClick = (evt) => {
+  flipThoughPromoSliders(evt, (i) => (+i === 0) ? promoSliderItemElements.length - 1 : 0);
+};
+
+let onSliderFormChange = (evt) => {
+  evt.preventDefault();
+  let inputRadio = evt.target;
+
+  if (!inputRadio.classList.contains(`slider-controls-input`)) {
+    return;
+  }
+
+  Array.from(promoSliderItemElements).forEach((slider) => {
+    if (slider.dataset.slide === inputRadio.id) {
+      slider.classList.remove(`hidden`);
+    } else {
+      slider.classList.add(`hidden`);
+    }
+  });
+};
+
+let addPromoSliderHandlers = () => {
+  sliderButtonNextElement.addEventListener(`click`, onSliderButtonNextElementClick);
+  sliderButtonBackElement.addEventListener(`click`, onSliderButtonBackElementClick);
+  sliderControlsForm.addEventListener(`change`, onSliderFormChange);
+}
+
 let addHandlers = () => {
   aboutContactsButtonElement.addEventListener(`click`, onAboutContactsButtonElementClick);
   writeUsForm.addEventListener(`submit`, onWriteUsFormSubmit);
   mapPreviewElement.addEventListener(`click`, onMapPreviewElementClick);
   document.addEventListener(`keydown`, onDocumentKeyDown);
   addServiceSliderHandlers();
+  addPromoSliderHandlers();
 };
 
 addHandlers();
