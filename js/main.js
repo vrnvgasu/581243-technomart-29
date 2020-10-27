@@ -8,6 +8,8 @@ const messageElement = writeUsElement.querySelector(`#message`);
 const writeUsForm = writeUsElement.querySelector(`.write-us-form`);
 const mapPreviewElement = document.querySelector(`.map-preview`);
 const contactsMapElement = document.querySelector(`.contacts-map`);
+const serviceItemElements = document.querySelectorAll(`.service-item`);
+const serviceSliderItemElements = document.querySelectorAll(`.service-slider-item`);
 
 let isStorageSupport = true;
 let storage = {};
@@ -86,11 +88,44 @@ let onDocumentKeyDown = (evt) => {
   }
 };
 
+let onServiceItemButtonClick = (dataset) => {
+  return (evt) => {
+    evt.preventDefault();
+    let serviceItem = evt.target.closest(`.service-item`);
+
+    if (serviceItem.classList.contains(`service-item-active`)) {
+      return;
+    }
+
+    Array.from(serviceItemElements).forEach((serviceItemElement) => {
+      serviceItemElement.classList.remove(`service-item-active`);
+    });
+    serviceItem.classList.add(`service-item-active`);
+
+    Array.from(serviceSliderItemElements).forEach((serviceSlide) => {
+      if (serviceSlide.classList.contains(dataset)) {
+        serviceSlide.classList.remove(`hidden`);
+      } else {
+        serviceSlide.classList.add(`hidden`);
+      }
+    });
+  }
+};
+
+let addServiceSliderHandlers = () => {
+  Array.from(serviceItemElements).forEach((element) => {
+    let dataset = element.dataset.slide;
+
+    element.addEventListener(`click`, onServiceItemButtonClick(dataset));
+  });
+}
+
 let addHandlers = () => {
   aboutContactsButtonElement.addEventListener(`click`, onAboutContactsButtonElementClick);
   writeUsForm.addEventListener(`submit`, onWriteUsFormSubmit);
   mapPreviewElement.addEventListener(`click`, onMapPreviewElementClick);
   document.addEventListener(`keydown`, onDocumentKeyDown);
+  addServiceSliderHandlers();
 };
 
 addHandlers();
