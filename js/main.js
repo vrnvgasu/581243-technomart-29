@@ -2,10 +2,7 @@
 
 const aboutContactsButtonElement = document.querySelector(`.about-contacts-button`);
 const writeUsElement = document.querySelector(`.write-us`);
-const emailElement = writeUsElement.querySelector(`#email`);
-const nameElement = writeUsElement.querySelector(`#name`);
-const messageElement = writeUsElement.querySelector(`#message`);
-const writeUsForm = writeUsElement.querySelector(`.write-us-form`);
+const writeUsForm = document.querySelector(`.write-us-form`);
 const mapPreviewElement = document.querySelector(`.map-preview`);
 const contactsMapElement = document.querySelector(`.contacts-map`);
 const serviceItemElements = document.querySelectorAll(`.service-item`);
@@ -14,6 +11,8 @@ const promoSliderItemElements = document.querySelectorAll(`.promo-slider-item`);
 const sliderButtonBackElement = document.querySelector(`.slider-button-back`);
 const sliderButtonNextElement = document.querySelector(`.slider-button-next`);
 const sliderControlsForm = document.querySelector(`.slider-controls`);
+const basketInfoElement = document.querySelector(`.basket-info`);
+const basketInfoProceedElement = document.querySelector(`.basket-info-proceed`);
 
 let isStorageSupport = true;
 let storage = {};
@@ -38,6 +37,10 @@ let findPopupCloseElement = (popup) => {
 };
 
 let focusForm = () => {
+  const emailElement = writeUsElement.querySelector(`#email`);
+  const nameElement = writeUsElement.querySelector(`#name`);
+  const messageElement = writeUsElement.querySelector(`#message`);
+
   if (storage.name) {
     nameElement.value = storage.name;
   } else {
@@ -86,8 +89,15 @@ let onWriteUsFormSubmit = () => {
 
 let onDocumentKeyDown = (evt) => {
   if (evt.keyCode === 27) {
-    writeUsElement.classList.remove(`modal-show`);
-    contactsMapElement.classList.remove(`modal-show`);
+    if (writeUsElement) {
+      writeUsElement.classList.remove(`modal-show`);
+    }
+    if (contactsMapElement) {
+      contactsMapElement.classList.remove(`modal-show`);
+    }
+    if (basketInfoElement) {
+      basketInfoElement.classList.remove(`modal-show`);
+    }
     evt.preventDefault();
   }
 };
@@ -175,13 +185,43 @@ let addPromoSliderHandlers = () => {
   sliderControlsForm.addEventListener(`change`, onSliderFormChange);
 }
 
+let onGoodBuyElementClick = (evt) => {
+  let buyButton = evt.target.closest(`.good-buy`);
+  if (buyButton && evt.target.classList.contains(`good-buy`)) {
+    evt.preventDefault();
+    basketInfoElement.classList.add(`modal-show`);
+
+    let popupCloseElement = findPopupCloseElement(basketInfoElement);
+    popupCloseElement.addEventListener(`click`, onPopupCloseClick);
+
+    popupCloseElement.addEventListener(`click`, onPopupCloseClick);
+  }
+};
+
+let onBasketInfoProceedElementClick = (evt) => {
+  evt.preventDefault();
+  basketInfoElement.classList.remove(`modal-show`);
+}
+
 let addHandlers = () => {
-  aboutContactsButtonElement.addEventListener(`click`, onAboutContactsButtonElementClick);
-  writeUsForm.addEventListener(`submit`, onWriteUsFormSubmit);
-  mapPreviewElement.addEventListener(`click`, onMapPreviewElementClick);
+  if (aboutContactsButtonElement) {
+    aboutContactsButtonElement.addEventListener(`click`, onAboutContactsButtonElementClick);
+  }
+  if (writeUsForm) {
+    writeUsForm.addEventListener(`submit`, onWriteUsFormSubmit);
+  }
+  if (mapPreviewElement) {
+    mapPreviewElement.addEventListener(`click`, onMapPreviewElementClick);
+  }
   document.addEventListener(`keydown`, onDocumentKeyDown);
-  addServiceSliderHandlers();
-  addPromoSliderHandlers();
+  if (sliderControlsForm) {
+    addServiceSliderHandlers();
+    addPromoSliderHandlers();
+  }
+  document.addEventListener(`click`, onGoodBuyElementClick);
+  if (basketInfoProceedElement) {
+    basketInfoProceedElement.addEventListener(`click`, onBasketInfoProceedElementClick);
+  }
 };
 
 addHandlers();
