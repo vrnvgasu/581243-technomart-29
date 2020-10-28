@@ -313,11 +313,11 @@ h1, h2, h3 {
   text-transform: none;
 }
 
-.main-header-panel button:hover {
+.make-order:hover {
   background-color: var(--success);
 }
 
-.main-header-panel button:active {
+.make-order:active {
   background-color: var(--basic-green);
   color: var(--color-trancend);
 }
@@ -514,20 +514,12 @@ h1, h2, h3 {
   order: 3;
 }
 
-.account-panel:hover a {
+.account-panel a:hover {
   color: var(--basic-red);
 }
 
-.account-panel:hover::after {
-  background-color: var(--basic-red);
-}
-
-.account-panel:active a {
+.account-panel a:active {
   color: var(--basic-greylight);
-}
-
-.account-panel:active::after {
-  background-color: var(--basic-greylight);
 }
 
 .site-navigation-list {
@@ -537,7 +529,7 @@ h1, h2, h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  box-shadow: 0px 5px 0px #293449;
+  box-shadow: 0px 5px 0px var(--header-panel);
   margin-bottom: 5px;
 }
 
@@ -870,9 +862,9 @@ input:checked + .slider-controls-button::before {
   border: 1px solid var(--basic-greylighter);
   box-sizing: content-box;
   width: 218px;
-  height: 316px;
+  min-height: 316px;
   display: grid;
-  grid-template-rows: 178px 1fr 1fr 58px;
+  grid-template-rows: 178px min-content 1fr 58px;
   position: relative;
 }
 
@@ -1217,6 +1209,7 @@ input:checked + .slider-controls-button::before {
   border: 1px solid var(--basic-red);
   margin-right: 12px;
   margin-bottom: 3px;
+  vertical-align: center;
 }
 
 .about-button {
@@ -1305,6 +1298,7 @@ input:checked + .slider-controls-button::before {
 
 .footer-site-map a:active {
   opacity: 0.5;
+  text-decoration: none;
 }
 
 .footer-promo-list a {
@@ -1390,6 +1384,7 @@ input:checked + .slider-controls-button::before {
 
 .feedback a:active, .designed a:active {
   color: var(--basic-red);
+  text-decoration: none;
 }
 
 .breadcrumbs {
@@ -1422,7 +1417,6 @@ input:checked + .slider-controls-button::before {
   content: "";
   width: 7px;
   height: 13px;
-  display: inline-block;
   background: url("../img/icon-breadcrumbs.svg") no-repeat 0 0;
   right: -23px;
   top: 4px;
@@ -1515,6 +1509,8 @@ input:checked + .slider-controls-button::before {
 
 .catalog-filter .form-supply {
   margin-top: 2px;
+  border-bottom: none;
+  padding-bottom: 1px;
 }
 
 .form-supply ul {
@@ -1650,7 +1646,7 @@ li.filter-option:hover label::after {
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 8px solid #ffffff;
+  border: 8px solid var(--white);
   background-color: var(--range-toggle);
   border-radius: 50%;
   box-shadow: 0 2px var(--range-toggle-light);
@@ -1680,7 +1676,6 @@ li.filter-option:hover label::after {
   width: 95px;
   height: 38px;
   text-align: center;
-  color: #283136;
   border: none;
   border-radius: 2px;
   background-color: var(--catalog-filters-background);
@@ -1827,7 +1822,7 @@ li.filter-option:hover label::after {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.nav_pages-list {
+.nav-pages-list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1835,11 +1830,11 @@ li.filter-option:hover label::after {
   padding: 0;
 }
 
-.nav_page:not(:last-child) {
+.nav-page:not(:last-child) {
   margin-right: 10px;
 }
 
-.nav_page a {
+.nav-page a {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1856,19 +1851,19 @@ li.filter-option:hover label::after {
   justify-content: center;
 }
 
-.nav_page:last-child a {
+.nav-page:last-child a {
   width: 140px;
 }
 
-.nav_pages-item a:hover {
+.nav-pages-item a:hover {
   border-color: var(--basic-greylight);
 }
 
-.nav_pages-item a:active {
+.nav-pages-item a:active {
   border-color: var(--basic-red);
 }
 
-.nav_pages-item-active a {
+.nav-pages-item-active a {
   color: var(--white);
   border-color: var(--basic-red);
   background-color: var(--basic-red);
@@ -1940,7 +1935,7 @@ li.filter-option:hover label::after {
   background-color: var(--basic-green);
   margin-top: 37px;
   margin-bottom: 10px;
-  box-shadow: inset 0px -3px 0px #367315;
+  box-shadow: inset 0px -3px 0px var(--basic-green-darkest);
   display: flex;
   align-items: center;
   justify-content: flex-start;
